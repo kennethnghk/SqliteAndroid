@@ -110,4 +110,13 @@ public class DBHandler extends SQLiteOpenHelper {
 
        db.close();
     }
+
+    public int getContactCount() {
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        String sql = "SELECT * FROM "+Util.TABLE_NAME;
+        Cursor cursor = db.rawQuery(sql, null);
+
+        return cursor.getCount();
+    }
 }
