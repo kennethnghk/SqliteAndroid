@@ -43,6 +43,8 @@ public class MainActivity extends AppCompatActivity {
         int updatedRow = db.updateContact(contactFound);
         Log.d("MainActivity", "onCreate: updatedRow - "+updatedRow);
 
+        db.deleteContact(contactFound);
+
         List<Contact> contactList = db.getAllContacts();
         for (Contact contact: contactList ) {
             Log.d("MainActivity", "onCreate: "+contact.getId()+" "+contact.getName());
