@@ -38,9 +38,14 @@ public class MainActivity extends AppCompatActivity {
         Contact contactFound = db.getContact(2);
         Log.d("MainActivity", "onCreate: contactFound - "+ contactFound.getName() );
 
+        contactFound.setName("Tommy");
+        contactFound.setPhoneNumber("29499933");
+        int updatedRow = db.updateContact(contactFound);
+        Log.d("MainActivity", "onCreate: updatedRow - "+updatedRow);
+
         List<Contact> contactList = db.getAllContacts();
         for (Contact contact: contactList ) {
-            Log.d("MainActivity", "onCreate: "+contact.getId());
+            Log.d("MainActivity", "onCreate: "+contact.getId()+" "+contact.getName());
         }
     }
 }
