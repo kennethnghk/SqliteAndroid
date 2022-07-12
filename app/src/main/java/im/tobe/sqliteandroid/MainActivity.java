@@ -8,7 +8,7 @@ import android.util.Log;
 
 import java.util.List;
 
-import im.tobe.sqliteandroid.data.DatabaseHandler;
+import im.tobe.sqliteandroid.data.DBHandler;
 import im.tobe.sqliteandroid.databinding.ActivityMainBinding;
 import im.tobe.sqliteandroid.model.Contact;
 
@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
 
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
 
-        DatabaseHandler db = new DatabaseHandler(MainActivity.this);
+        DBHandler db = new DBHandler(MainActivity.this);
 
         Contact contact1 = new Contact();
         contact1.setName("Jeremy");

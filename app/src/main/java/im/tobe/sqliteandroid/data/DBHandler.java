@@ -15,9 +15,9 @@ import java.util.List;
 import im.tobe.sqliteandroid.model.Contact;
 import im.tobe.sqliteandroid.util.Util;
 
-public class DatabaseHandler extends SQLiteOpenHelper {
+public class DBHandler extends SQLiteOpenHelper {
 
-    public DatabaseHandler(@Nullable Context context) {
+    public DBHandler(@Nullable Context context) {
         super(context, Util.DATABASE_NAME, null, Util.DATABASE_VERSION);
     }
 
